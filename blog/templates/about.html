@@ -1,0 +1,118 @@
+{% load static from staticfiles %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About</title>
+</head>
+<style>
+    .header {
+  padding: 80px;
+  text-align: center;
+  background: #DC143C;
+  color: white;
+}
+
+.header h1 {
+  font-size: 60px;
+}
+.header p {
+  font-size:30px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.navbar {
+  overflow: hidden; /* Hide overflow */
+  background-color: #333; /* Dark background color */
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 14px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+  font weight: bold;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+  background-color: #ddd; /* Grey background color */
+  color: black; /* Black text color */
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 50%; /* Set the width of the sidebar */
+  background-color: #f1f1f1; /* Grey background color */
+  background-image: url(/static/weights.jpg) no repeat;
+  background-origin: content-box;
+  background-size: cover;
+
+}
+
+/* Main column */
+.main {
+  flex: 50%; /* Set the width of the main content */
+  background-color: white; /* White background color */
+  padding: 20px; /* Some padding */
+}
+</style>
+<body>
+<div class="navbar">
+    <ul class="navbar">
+        <a href="/home/reviews" class="w3-button w3-bar-item right">Reviews</a>
+        <a href="/home/contact" class="w3-button w3-bar-item right">Contact</a>
+        <a href="/home/gallery" class="w3-button w3-bar-item right">Gallery</a>
+        <a href="/home/packages" class="w3-button w3-bar-item right">Packages</a>
+        <a href="/home/blog" class="w3-button w3-bar-item right">Blog</a>
+        <a href="/home/about" class="w3-button w3-bar-item right">About</a>
+    </ul>
+</div>
+
+
+
+<div class="header">
+  <h1>WorkOut</h1>
+  <p>We like to Train.</p>
+</div>
+<div class="row">
+  <div class="side">
+      <img src="/static/weights.jpg" width="622" height="320">
+  </div>
+  <div class="main">
+      <h3>Mission</h3>
+      <p>We are committed to delivering:</p>
+      <ul>
+          <li>30 minute workouts</li>
+          <li>Improving stamina and strength</li>
+          <li>Changing your diet</li>
+      </ul>
+  </div>
+</div>
+</body>
+</html>
+

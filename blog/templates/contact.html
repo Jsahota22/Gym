@@ -1,0 +1,132 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<style>
+html{
+  background: url(/static/gym.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+.navbar {
+  overflow: hidden; /* Hide overflow */
+  background-color: #333; /* Dark background color */
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 0px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+  font weight: bold;
+  font-size: 20px;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+  background-color: #ddd; /* Grey background color */
+  color: black; /* Black text color */
+}
+* {
+  box-sizing: border-box;
+  height: 50px;
+}
+
+.header h1 {
+  font-size: 43px;
+  font-family: Georgia, serif;
+  color: crimson;
+  text-align: right;
+  border: 10px;
+  text-decoration: underline;
+}
+
+.enquiry fieldset {
+background-color: #3E3A3A;
+height: 370px;
+width: 180px;
+}
+
+label {
+  display: inline-block;
+  float: right;
+  clear: left;
+  width: 160px;
+  text-align: right;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  height: 20px;
+  padding: 0px;
+  margin-top:10px;
+  margin-bottom:5px;
+}
+
+input {
+  display: inline-block;
+  float: right;
+  width: 150px;
+  height: 20px;
+  padding:10px;
+}
+select {
+  width: 150px;
+  height: 20px;
+  margin: 0px 0px 15px;
+  padding: 10px;
+}
+
+input[type=submit]{
+  margin: 0px;
+  padding:15px 15px;
+  text-align: centre;
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Enquire</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+<div class="navbar">
+    <ul class="navbar">
+        <a href="/home/reviews" class="w3-button w3-bar-item right">Reviews</a>
+        <a href="/home/contact" class="w3-button w3-bar-item right">Contact</a>
+        <a href="/home/gallery" class="w3-button w3-bar-item right">Gallery</a>
+        <a href="/home/packages" class="w3-button w3-bar-item right">Packages</a>
+        <a href="/home/blog" class="w3-button w3-bar-item right">Blog</a>
+        <a href="/home/about" class="w3-button w3-bar-item right">About</a>
+    </ul>
+</div>
+     <div class="header">
+        <h1>Enquire</h1>
+     <div class="enquiry" align="right">
+
+    <form>
+        <fieldset style="float: right;">
+        <label>First name:</label><br><input type="text" name="firstname"><br>
+        <label>Last name:</label><br><input type="text" name="lastname"><br>
+        <label>Email address:</label><br><input type="text" name="emailaddress"><br>
+        <label>Contact number:</label><br><input type="text" name="contactnumber"><br>
+            <label>Gender:</label><br><select name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option><br>
+        </select>
+            <br><input type="submit" value="Submit"><br>
+        </fieldset>
+
+    </form>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .navbar {
+  overflow: hidden; /* Hide overflow */
+  background-color: #333; /* Dark background color */
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 0px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+  font weight: bold;
+  font-size: 20px;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+  background-color: #ddd; /* Grey background color */
+  color: black; /* Black text color */
+}
+* {
+  box-sizing: border-box;
+  height: 50px;
+}
+.header h1 {
+  font-size: 43px;
+  font-family: Georgia, serif;
+  color: crimson;
+  text-align: center;
+  border: 10px;
+  text-decoration: underline;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<div class="navbar">
+    <ul class="navbar">
+        <a href="/home/reviews" class="w3-button w3-bar-item right">Reviews</a>
+        <a href="/home/contact" class="w3-button w3-bar-item right">Contact</a>
+        <a href="/home/gallery" class="w3-button w3-bar-item right">Gallery</a>
+        <a href="/home/packages" class="w3-button w3-bar-item right">Packages</a>
+        <a href="/home/blog" class="w3-button w3-bar-item right">Blog</a>
+        <a href="/home/about" class="w3-button w3-bar-item right">About</a>
+    </ul>
+</div>
+<div class="header">
+    <h1>Welcome to our Gallery</h1>
+</div>
+
+
+</body>
+</html>
